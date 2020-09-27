@@ -1,0 +1,5 @@
+a = map(int, input().split())
+def down(a):
+  a = sort(a)
+  return a
+  
