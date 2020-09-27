@@ -21,8 +21,4 @@ def cocktail(a):
                 swap = True
         if not swap:
             break
- 
-num_list = [75, 16, 55, 19, 48, 14, 2, 61, 22, 100]
-print("Before: ", num_list)
-cocktail(num_list)
-print("After:  ", num_list)
+
