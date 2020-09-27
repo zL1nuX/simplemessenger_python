@@ -1,4 +1,4 @@
-a = map(int, input().split())
+
 def down(a):
   return sort(a)
   
@@ -18,6 +18,9 @@ def cocktail(a):
                 swap = True
         if not swap:
             break
+    return a
+
+
 
 #КОД ТИМУРА
 def mergeSort(alist):
