@@ -11,12 +11,9 @@ def cocktail(a):
     for i in range(len(a)//2):
         swap = False
         for j in range(1+i, len(a)-i):
-            # test whether the two elements are in the wrong order
             if a[j] < a[j-1]:
-                # let the two elements change places
                 a[j], a[j-1] = a[j-1], a[j]
                 swap = True
-        # we can exit the outer loop here if no swaps occurred.
         if not swap:
             break
         swap = False
@@ -27,7 +24,7 @@ def cocktail(a):
         if not swap:
             break
 
- #ЭТО КОД ТИМУРА
+
 def mergeSort(alist):
     if len(alist) > 1:
         mid = len(alist) // 2
@@ -59,8 +56,6 @@ def mergeSort(alist):
             j = j + 1
             k = k + 1
     return ' '.join(map(str, alist))
-#код тимура закончен
-#тут был костя 
 
 
 
