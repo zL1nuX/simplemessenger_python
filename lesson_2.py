@@ -56,6 +56,6 @@ def mergeSort(alist):
             j = j + 1
             k = k + 1
     return ' '.join(map(str, alist))
-
+ #Тимофей гигант
 
 
