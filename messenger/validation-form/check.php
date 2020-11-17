@@ -17,7 +17,7 @@
     $login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
     $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
     $password = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
-    $img = addslashes(file_get_contents('https://lh3.googleusercontent.com/proxy/DESQ6NiCEhdawzSviFlEPp2q217GB6E_sK0A0e33yTpWhewN5HF1M34UzbL1SZub5MFoUUTrLvHpJCnla36qV-YzYhGIFQBtnEcPdIg'));
+    $img = addslashes(file_get_contents('https://eaassets-a.akamaihd.net/battlelog/prod/emblem/236/734/320/2955060602438839644.png?v=1393499026'));
 
     if (mb_strlen($login) < 5 || mb_strlen($login) > 90) {
         echo "<div class='container'><h1>Недопустимая длина логина (нужно 5-90 символов)</h1>";

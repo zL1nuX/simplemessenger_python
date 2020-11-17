@@ -47,32 +47,32 @@
         <h1>Добро пожаловать, <?=$_COOKIE['user']?>, в Марюсчат</h1>
         <div class="container">
             <center>
-            <form method="post" action="validation-form/publish.php" enctype="multipart/form-data">
+            <form method="post" action="publish.php" enctype="multipart/form-data">
                 <input type="file" name="inputimg">
                 <input type="submit">
             </form>
             </center>
         </div>
     <hr>
-    <div class="container">
-        <?php
-                $connect = new mysqli('localhost', 'brawlerdem', 'Registerdb54', 'brawleraid');
-                $r = $connect->query("SELECT * FROM `messages`");
-                foreach ($r as $rw) {
+</div>
+<div class="container">
+    <?php
+    $connect = new mysqli('localhost', 'brawlerdem', 'Registerdb54', 'brawleraid');
+    $r = $connect->query("SELECT * FROM `messages`");
+    foreach ($r as $rw) {
 
-                    $user = $rw['username'];
-                    $message = $rw['message'];
-                    $req = $connect->query("SELECT `img` FROM `users` WHERE `users`.`name` = '$user'");
-                    $row = $req -> fetch_assoc();
-                    echo '<p><img src="data:image/jpeg;base64,'.base64_encode( $row['img']).'" width=20px height=20px/>'."<b>$user:</b> </p>";
-                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $message).'" width=200px height=200px/>';
-
-
-                }
-        ?>
-    </div>
+        $user = $rw['username'];
+        $message = $rw['message'];
+        $req = $connect->query("SELECT `img` FROM `users` WHERE `users`.`name` = '$user'");
+        $row = $req -> fetch_assoc();
+        echo '<p><img src="data:image/jpeg;base64,'.base64_encode( $row['img']).'" width=20px height=20px/>'."<b>$user:</b> </p>";
+        echo '<img src="upload/'.$message.'" width=200px height=200px/>';
 
 
+    }
+    ?>
+
+</div>
     <?php
     endif;
     ?>
